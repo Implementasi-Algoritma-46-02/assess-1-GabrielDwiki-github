@@ -1,8 +1,8 @@
 ## Identitas
 
-Nama: 
+Nama: Gabriel Dwiki Putra
 
-NIM : 
+NIM : 607062400096
 
 ## Instruksi
 
