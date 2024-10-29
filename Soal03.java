@@ -5,30 +5,17 @@ public class Soal03 {
 
     public static void main(final String[] args) {
         // Kerjakan soalnya di sini
-        Scanner userInput = new Scanner(System.in);
-        int jam = userInput.nextInt();
-        int menit = userInput.nextInt();
-        int penambahanmenit = userInput.nextInt();
-        System.out.println(penjumlahanJam(jam, menit, penambahanmenit));
-
-    }
-
-    public static String penjumlahanJam(int jamSekarang, int menitSekarang, int MenitYangDiJumlahkan) {
-        int rumusMenit = menitSekarang + MenitYangDiJumlahkan;
-        int hasilmenit = rumusMenit;
-        int penambahanJam = 0;
-        if (rumusMenit > 59) {
-            penambahanJam = rumusMenit / 60;
-            hasilmenit = rumusMenit - (rumusMenit / 60);
-						int hasilvalid = hasilmenit*60;
-        }
-        int jumlahJam = jamSekarang + penambahanJam;
-        String teksJam = "" + jumlahJam;
-        if (jumlahJam < 10) {
-            teksJam = "0" + jumlahJam;
-        }
-        return String.format("%d %s", teksJam, hasilmenit);
-
-    }
-
-}
+				Scanner scanner = new Scanner(System.in);
+				int H = scanner.nextInt();
+						int M = scanner.nextInt();
+						int V = scanner.nextInt();
+						int totalMenit = M + V;
+						int totalJam = H + totalMenit / 60;
+						totalMenit = totalMenit % 60; 
+						String jamFormat = String.format("%02d", totalJam % 24); 
+						String menitFormat = String.format("%02d", totalMenit);
+						System.out.println(jamFormat + ":" + menitFormat);
+		
+						scanner.close();
+			}
+		}
